@@ -22,3 +22,6 @@ class PrimeNumbersTestCase(unittest.TestCase):
     #
     def test_input_is_not_integer2(self):
         self.assertEqual(test_func.prime_number_gen([]), 'Only Numbers allowed')
+
+    def test_input_is_not_integer3(self):
+        self.assertEqual(test_func.prime_number_gen({}), 'Only Numbers allowed')
