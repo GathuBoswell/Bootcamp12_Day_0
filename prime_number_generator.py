@@ -8,8 +8,15 @@ def is_prime(num):
             if num % i == 0:
                 return False
         return True
+
 def prime_number_gen(n):
     primes_list = []
+    if type(n) != int:
+        return 'Only Numbers allowed'
+    elif n < 0:
+        return 'Only Positve Numbers allowed'
+    elif n == 0:
+        return []
     for x in range(2, n+1):
         if is_prime(x):
             primes_list.append(x)
