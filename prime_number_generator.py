@@ -1,9 +1,7 @@
 def is_prime(num):
     if num == 2:
         return True
-    elif num % 2 == 0:
-        return False
-    else:
+    if num % 2 != 0: # only pass odd numbers
         for i in range(3, num):
             if num % i == 0:
                 return False
@@ -15,7 +13,7 @@ def prime_number_gen(n):
         return 'Only Numbers allowed'
     elif n < 0:
         return 'Only Positve Numbers allowed'
-    elif n == 0:
+    elif n <= 1:
         return []
     for x in range(2, n+1):
         if is_prime(x):
@@ -26,7 +24,7 @@ def prime_number_gen(n):
 
 def main():
     print(is_prime(2))
-    print(prime_number_gen(2))
+    print(prime_number_gen(100))
 
 if __name__ == '__main__':main()
 
