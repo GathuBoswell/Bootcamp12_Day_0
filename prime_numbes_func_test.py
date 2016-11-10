@@ -11,7 +11,7 @@ class PrimeNumbersTestCase(unittest.TestCase):
     def test_returns_true2(self):
         self.assertEqual(test_func.prime_number_gen(2), [2])
 
-    def test_returns_true_if_n_is_prime(self):
+    def test_includes_n_if_n_is_prime(self):
         self.assertEqual(test_func.prime_number_gen(5), [2, 3, 5])
 
     def test_negative_input(self):
