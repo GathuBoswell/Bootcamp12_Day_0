@@ -4,10 +4,19 @@ import prime_number_generator as test_func
 
 
 class PrimeNumberstestCase(unittest.TestCase):
-    def test_returns_true(self):
+    def test_returns_true1(self):
         self.assertEqual(test_func.prime_number_gen(10), [2, 3, 5, 7])
-    def test_returns_true(self):
+
+    def test_returns_true2(self):
         self.assertEqual(test_func.prime_number_gen(2), [2])
 
+    def test_negatve_input(self):
+        self.assertEqual(test_func.prime_number_gen(-1), 'Only Positve Numbers allowed')
+
+    def test_input_0(self):
+        self.assertEqual(test_func.prime_number_gen(0), [])
+        
+    def test_negatve_input(self):
+        self.assertEqual(test_func.prime_number_gen(0), 'Only Positve Numbers allowed')
 if __name__ == '__main__':
     unittest.main()
