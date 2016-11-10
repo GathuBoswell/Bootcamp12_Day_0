@@ -7,6 +7,6 @@
 	This increases the number of iterations to be done per number to be checked and added to the list
 	since each number is passed to the is_prime() function first.
 	
-	__Asymptotic test for is_prime__
+	__Asymptotic analysis for is_prime__
 	Every number which is even is returned as false imediately this reduces number of iterations by half
 		
