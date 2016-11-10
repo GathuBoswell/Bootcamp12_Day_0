@@ -7,6 +7,5 @@
 	This increases the number of iterations to be done per number to be checked and added to the list
 	since each number is passed to the is_prime() function first.
 	
-	It does well for numbers below 10000 but takes a lot of time for numbers above 10000
-	Hence this solution is a good base case but requires improvment or a better algorithm
+	The recent commit greatly improves on the performance if the given number n is greater than 1,000,000
 		
