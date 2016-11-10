@@ -15,8 +15,11 @@ class PrimeNumberstestCase(unittest.TestCase):
 
     def test_input_0(self):
         self.assertEqual(test_func.prime_number_gen(0), [])
-        
+
     def test_negatve_input(self):
         self.assertEqual(test_func.prime_number_gen(0), 'Only Positve Numbers allowed')
+
+    def test_input_is_not_integer(self):
+        self.assertEqual(test_func.prime_number_gen(''), 'Only Positve Numbers allowed')
 if __name__ == '__main__':
     unittest.main()
