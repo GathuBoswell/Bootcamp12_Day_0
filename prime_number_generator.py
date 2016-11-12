@@ -1,15 +1,25 @@
-def is_prime(num):
-    for i in range(3, int(num**0.5) + 1, 2):
-        if num % i == 0:
-            return False
-    return True
-
 def prime_number_gen(n):
+    """
+    The is_prime function has been defined in here to hide it from the outer scope
+
+    :param n:
+    :return [prime numbers between 0 and n]:
+    """
+    def is_prime(num):
+        """
+        returns True if num is prime else, False
+        :param num:
+        :return bool:
+        """
+        for i in range(3, int(num ** 0.5) + 1, 2):
+            if num % i == 0:
+                return False
+        return True
     primes_list = []
     if type(n) != int:
         return 'Only Numbers allowed'
     elif n < 0:
-        return 'Only Positve Numbers allowed'
+        return 'Only Positive Numbers allowed'
     elif n <= 1:
         return []
     elif n >= 2:
